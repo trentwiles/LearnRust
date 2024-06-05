@@ -18,4 +18,27 @@ fn main(){
     // will not work
     // let unfloated: u32 = floatExample;
     // println!("unfloated: {unfloated}");
+
+
+    // boolean
+    let boolean: bool = true;
+    let boolean: bool = false;
+
+    // characters
+    let chr: char = 'd';
+
+    // tuple
+    let exampleTuple: (u32, char, u8) = (384, 'x', 9);
+    let (x,y,z) = exampleTuple;
+    println!("x = {x}, y = {y}, z = {z}"); // x = 384, y = x, z = 9
+    // you can also access elements directly like so
+    let firstVal = exampleTuple.0;
+    println!("first value = {firstVal}");
+
+
+    // arrays
+    let arr = [1,3,5];
+    let arr2: [u32; 5] = [1,2,3,4,5];
+    let secondElement = arr2[1];
+    println!("Second element: {secondElement}")
 }
