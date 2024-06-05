@@ -64,4 +64,51 @@ fn main(){
 
     // multiple loops and "loop labels"
     // this gets a bit complex...
+    let mut central_counter = 0;
+    'first_loop: loop{
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                // breaks this inside loop
+                break;
+            }
+            if central_counter == 2 {
+                // breaks outer loop
+                break 'first_loop;
+            }
+            remaining -= 1;
+        }
+
+        central_counter += 1;
+    }
+
+    // while
+    let mut y = 0;
+    while y < 10{
+        println!("y = {y}");
+        y += 1;
+    }
+
+    // "for" loop
+    let arr = [1, 4, 5, 9, 0];
+    let mut index = 0;
+    while index < arr.len(){
+        println!("{}", arr[index]);
+        index += 1;
+    }
+
+    // fancy for loop
+    for elem in arr{
+        println!("{}", elem);
+    }
+
+    println!("-----------------------------------------");
+    // looping through incriment
+    // prints 3 2 1
+    // last number in range is not inclusive
+    for num in (1..4).rev(){
+        println!("{}", num);
+    }
 }
