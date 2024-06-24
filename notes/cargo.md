@@ -1,7 +1,7 @@
 # Basic Cargo Guide
 
 ## Project Commands
-1. New cargo project: `cargo new` (a new Cargo.toml file has been made)
+1. New cargo project: `cargo new [project_name]` (a new Cargo.toml file has been made)
 2. Compile: `cargo build`
 3. Run: `cargo run`
 
