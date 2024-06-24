@@ -47,4 +47,21 @@ fn main(){
     }
 
     let example1 = MultipleOptions::<String>::variable("hey".to_string());
+
+    // JollyRancher control flow
+    fn value_in_cents(jolly: Flavors) -> bool {
+        match jolly {
+            Flavors::BlueRaspberry => true,
+            Flavors::Watermellon => false,
+            Flavors::SourApple => {
+                println!("eww i hate sour");
+                println!("it is the worst");
+                false
+            }
+        }
+    }
+
+    
+
 }
+
