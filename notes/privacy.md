@@ -66,3 +66,36 @@ pub struct Asparagus {}
 * So when `let plant = Asparagus {};` is called in the main.rs file, the code will compile!
 
 ### More Module Grouping
+
+* Using the following code...
+
+```
+mod front_of_house {
+    mod hosting {
+        fn add_to_waitlist() {}
+
+        fn seat_at_table() {}
+    }
+
+    mod serving {
+        fn take_order() {}
+
+        fn serve_order() {}
+
+        fn take_payment() {}
+    }
+}
+```
+
+* You would have the following folder structure:
+```
+crate
+ └── front_of_house
+     ├── hosting
+     │   ├── add_to_waitlist
+     │   └── seat_at_table
+     └── serving
+         ├── take_order
+         ├── serve_order
+         └── take_payment
+```
